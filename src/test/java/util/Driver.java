@@ -12,10 +12,10 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
     private static WebDriver driver = null;
-    private static String propertyPath = "/src/test/resources/config/configurations.properties";
+    public static final String propertyPath = "./src/test/resources/conf/configurations.properties";
 
-    public static void initialize(String browser) {
-        if (driver != null)
+    public static void initialize(String browser){
+        if (driver != null )
             return;
         switch (browser) {
             case "chrome":
@@ -36,11 +36,10 @@ public class Driver {
         driver.manage().timeouts().implicitlyWait(SeleniumConstants.IMPLICIT_WAIT_TIME, TimeUnit.SECONDS);
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(SeleniumConstants.PAGE_LOAD_TIME, TimeUnit.SECONDS);
-        driver.get(ConfigReader.readProperty(propertyPath, "url"));
     }
 
-    public static void closeDriver() {
-        if (driver != null) {
+    public static void closeDriver(){
+        if (driver != null){
             driver.close();
             driver = null;
         }
@@ -51,12 +50,15 @@ public class Driver {
             driver.quit();
         driver = null;
     }
+
     public static WebDriver getDriver(){
-        if(driver!= null)
+        if (driver != null)
             return driver;
-        initialize(ConfigReader.readProperty(propertyPath,"browser"));
+        initialize(ConfigReader.readProperty("browser"));
         return driver;
     }
+
+
 }
 
 

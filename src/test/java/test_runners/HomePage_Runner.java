@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/resources/features/",
+        features = "src/test/resources/features/",//
         glue = "step_definitions",
         plugin = {
                 "pretty",// inEVE
@@ -14,7 +14,8 @@ import org.junit.runner.RunWith;
                 "json:target/cucumber-reports/cucumberTestReports.json",
 
         },
-        tags = {"@homePage"}
+        tags = {"@homePage"},
+        dryRun = false
 )
 public class HomePage_Runner {// RUNNER CLASS DONT HAVE ANYTHING INSIDE THE BODY
 }

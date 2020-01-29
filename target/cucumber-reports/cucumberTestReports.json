@@ -3,60 +3,178 @@
     "line": 2,
     "elements": [
       {
-        "start_timestamp": "2020-01-22T03:14:45.286Z",
-        "line": 4,
-        "name": "Verify title of Home Page",
+        "start_timestamp": "2020-01-29T01:19:20.898Z",
+        "line": 19,
+        "name": "User select last feature tour on Home page",
         "description": "",
-        "id": "home-page-testing;verify-title-of-home-page",
+        "id": "booking-page-test;user-select-last-feature-tour-on-home-page",
         "type": "scenario",
         "keyword": "Scenario",
         "steps": [
           {
             "result": {
-              "status": "undefined"
+              "duration": 9243347373,
+              "status": "passed"
             },
-            "line": 5,
+            "line": 20,
             "name": "User opens home page",
-            "match": {},
+            "match": {
+              "location": "HomePage_STEPS.user_opens_home_page()"
+            },
             "keyword": "Given "
           },
           {
             "result": {
-              "status": "undefined"
+              "duration": 9959973770,
+              "status": "passed"
             },
-            "line": 6,
-            "name": "User sees main button",
-            "match": {},
+            "line": 21,
+            "name": "User opens \"last tour\" featured tour",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"last tour\"",
+                  "offset": 11
+                }
+              ],
+              "location": "HomePage_STEPS.user_opens_featured_tour(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 50112839,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "User select last tour package from list",
+            "match": {
+              "location": "BookingPage_STEPS.user_select_last_tour_package_from_list()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 983855,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "User should see pop up window",
+            "match": {
+              "location": "BookingPage_STEPS.user_should_see_pop_up_window()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 15358084659,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "User fill out form and click submit",
+            "match": {
+              "location": "BookingPage_STEPS.user_fill_out_form_and_click_submit()"
+            },
             "keyword": "When "
           },
           {
             "result": {
-              "status": "undefined"
+              "error_message": "org.junit.ComparisonFailure: expected:\u003c[Day Visit of Petra from Oman]\u003e but was:\u003c[]\u003e\n\tat org.junit.Assert.assertEquals(Assert.java:117)\n\tat org.junit.Assert.assertEquals(Assert.java:146)\n\tat step_definitions.BookingPage_STEPS.user_should_see_message(BookingPage_STEPS.java:66)\n\tat ✽.User should see message \"Your booking status is Unpaid\"(file:src/test/resources/features/bookingPage.feature:25)\n",
+              "duration": 80274621,
+              "status": "failed"
             },
-            "line": 7,
-            "name": "Verifies  title is PHPTRAVELS | Travel Technology Patner",
-            "match": {},
+            "line": 25,
+            "name": "User should see message \"Your booking status is Unpaid\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Your booking status is Unpaid\"",
+                  "offset": 24
+                }
+              ],
+              "location": "BookingPage_STEPS.user_should_see_message(String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2971358,
+              "status": "skipped"
+            },
+            "line": 26,
+            "name": "User should click on \"Pay on Arrival\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Pay on Arrival\"",
+                  "offset": 21
+                }
+              ],
+              "location": "BookingPage_STEPS.user_should_click_on(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1555880,
+              "status": "skipped"
+            },
+            "line": 27,
+            "name": "User should see pop up window to confirm",
+            "match": {
+              "location": "BookingPage_STEPS.user_should_see_pop_up_window_to_confirm()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1064533,
+              "status": "skipped"
+            },
+            "line": 28,
+            "name": "User accept pop up window",
+            "match": {
+              "location": "BookingPage_STEPS.user_accept_pop_up_window()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2287519,
+              "status": "skipped"
+            },
+            "line": 29,
+            "name": "User see message \"Your booking status is Reserved\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Your booking status is Reserved\"",
+                  "offset": 17
+                }
+              ],
+              "location": "BookingPage_STEPS.user_see_message(String)"
+            },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@homePage"
+            "name": "@bookingPage"
           },
           {
-            "name": "@titleTest"
+            "name": "@testingBookinPage"
           }
         ]
       }
     ],
-    "name": "Home page Testing",
+    "name": "Booking Page Test",
     "description": "",
-    "id": "home-page-testing",
+    "id": "booking-page-test",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/homePage.feature",
+    "uri": "file:src/test/resources/features/bookingPage.feature",
     "tags": [
       {
-        "name": "@homePage",
+        "name": "@bookingPage",
         "type": "Tag",
         "location": {
           "line": 1,
