@@ -10,21 +10,6 @@ public class PojoStudent {
         this.group = group;
         this.studentID = studentID;
     }
-//String parentWindow = driver.getWindowHandle();
-//Set<String> windowHandles = driver.getWindowHandles();
-//Iterator<String> iterator = windowHandles.iterator();
-//while (iterator.hasNext()) {
-//   String handle = iterator.next();
-//   if (!handle.contains(parentWindow)) {
-//                    // Switch to popup
-//                    driver.switchTo().window(handle);
-//                    // Add code to find element
-//       }
-//}
-//// Switch back to original window
-//driver.switchTo().window(parentWindow);
-//This code will work with any number of popups
-
 
     public String getName() {
         return name;
